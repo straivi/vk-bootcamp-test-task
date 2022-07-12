@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A683AD6B287E24C6002496CE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AD6A287E24C6002496CE /* NetworkService.swift */; };
+		A683AD6D287E27A7002496CE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AD6C287E27A7002496CE /* Models.swift */; };
+		A683AD6F287E2A43002496CE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AD6E287E2A43002496CE /* LoadingView.swift */; };
+		A683AD71287E2A4F002496CE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AD70287E2A4F002496CE /* ErrorView.swift */; };
 		A6C09DF7287DCED400647049 /* VkSummercampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09DF6287DCED400647049 /* VkSummercampApp.swift */; };
-		A6C09DF9287DCED400647049 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09DF8287DCED400647049 /* ContentView.swift */; };
+		A6C09DF9287DCED400647049 /* AppsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09DF8287DCED400647049 /* AppsListView.swift */; };
 		A6C09DFB287DCED400647049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C09DFA287DCED400647049 /* Assets.xcassets */; };
 		A6C09DFE287DCED400647049 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C09DFD287DCED400647049 /* Preview Assets.xcassets */; };
+		A6C09E06287E1AD300647049 /* AppsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09E05287E1AD300647049 /* AppsListViewModel.swift */; };
+		A6C09E09287E1B0200647049 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09E08287E1B0200647049 /* StateMachine.swift */; };
+		A6C09E0B287E1B2E00647049 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C09E0A287E1B2E00647049 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A683AD6A287E24C6002496CE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A683AD6C287E27A7002496CE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A683AD6E287E2A43002496CE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A683AD70287E2A4F002496CE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A6C09DF3287DCED400647049 /* VkSummercamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkSummercamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C09DF6287DCED400647049 /* VkSummercampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkSummercampApp.swift; sourceTree = "<group>"; };
-		A6C09DF8287DCED400647049 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A6C09DF8287DCED400647049 /* AppsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsListView.swift; sourceTree = "<group>"; };
 		A6C09DFA287DCED400647049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6C09DFD287DCED400647049 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A6C09E05287E1AD300647049 /* AppsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsListViewModel.swift; sourceTree = "<group>"; };
+		A6C09E08287E1B0200647049 /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		A6C09E0A287E1B2E00647049 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,14 @@
 		A6C09DF5287DCED400647049 /* VkSummercamp */ = {
 			isa = PBXGroup;
 			children = (
+				A6C09E07287E1AF400647049 /* StateMachine */,
 				A6C09DF6287DCED400647049 /* VkSummercampApp.swift */,
-				A6C09DF8287DCED400647049 /* ContentView.swift */,
+				A6C09DF8287DCED400647049 /* AppsListView.swift */,
+				A6C09E05287E1AD300647049 /* AppsListViewModel.swift */,
+				A683AD6E287E2A43002496CE /* LoadingView.swift */,
+				A683AD70287E2A4F002496CE /* ErrorView.swift */,
+				A683AD6A287E24C6002496CE /* NetworkService.swift */,
+				A683AD6C287E27A7002496CE /* Models.swift */,
 				A6C09DFA287DCED400647049 /* Assets.xcassets */,
 				A6C09DFC287DCED400647049 /* Preview Content */,
 			);
@@ -65,6 +85,15 @@
 				A6C09DFD287DCED400647049 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A6C09E07287E1AF400647049 /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				A6C09E08287E1B0200647049 /* StateMachine.swift */,
+				A6C09E0A287E1B2E00647049 /* ViewState.swift */,
+			);
+			path = StateMachine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C09DF9287DCED400647049 /* ContentView.swift in Sources */,
+				A6C09DF9287DCED400647049 /* AppsListView.swift in Sources */,
+				A6C09E06287E1AD300647049 /* AppsListViewModel.swift in Sources */,
+				A6C09E0B287E1B2E00647049 /* ViewState.swift in Sources */,
 				A6C09DF7287DCED400647049 /* VkSummercampApp.swift in Sources */,
+				A683AD6B287E24C6002496CE /* NetworkService.swift in Sources */,
+				A683AD6F287E2A43002496CE /* LoadingView.swift in Sources */,
+				A6C09E09287E1B0200647049 /* StateMachine.swift in Sources */,
+				A683AD71287E2A4F002496CE /* ErrorView.swift in Sources */,
+				A683AD6D287E27A7002496CE /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
