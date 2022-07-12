@@ -11,7 +11,12 @@ import SwiftUI
 struct VkSummercampApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                AppsListView(viewModel: AppsListViewModel(state: .empty))
+                    .tabItem {
+                        Label("Apps", systemImage: "list.bullet")
+                    }
+            }
         }
     }
 }
