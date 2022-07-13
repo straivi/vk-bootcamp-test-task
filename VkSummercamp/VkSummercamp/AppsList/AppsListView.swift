@@ -18,20 +18,23 @@ struct AppsListView: View {
                 List(list) {
                     Text($0.name)
                 }
+                .refreshable {
+                    viewModel.pullToRefreshAction()
+                }
             case .loading:
                 LoadingView()
             case .empty:
                 EmptyView {
-                    viewModel.requestData()
+                    viewModel.requestAction()
                 }
             case .error:
                 ErrorView {
-                    viewModel.requestData()
+                    viewModel.requestAction()
                 }
             }
         }
         .onAppear {
-            viewModel.requestData()
+            viewModel.requestAction()
         }
     }
 }

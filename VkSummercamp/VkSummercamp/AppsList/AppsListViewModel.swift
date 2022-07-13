@@ -25,8 +25,7 @@ class AppsListViewModel: ObservableObject {
         }
     }
 
-    func requestData() {
-        stateMachine.setState(.loading)
+    private func requestData() {
         networkCancellable = networkService.request().sink(receiveCompletion: { [weak self] completion in
             switch completion {
             case.finished:
@@ -41,5 +40,14 @@ class AppsListViewModel: ObservableObject {
                 self?.stateMachine.setState(.content(appsList))
             }
         })
+    }
+
+    func requestAction() {
+        stateMachine.setState(.loading)
+        requestData()
+    }
+
+    func pullToRefreshAction() {
+        requestData()
     }
 }
