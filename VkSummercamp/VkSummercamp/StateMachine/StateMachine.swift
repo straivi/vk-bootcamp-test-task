@@ -5,9 +5,11 @@
 //  Created by Матвей Борисов on 13.07.2022.
 //
 
+import Foundation
 import Combine
 
 class StateMachine<T>: ObservableObject {
+    private let delay: TimeInterval = 1
 
     @Published private(set) var state: ViewState<T>
 
@@ -15,18 +17,19 @@ class StateMachine<T>: ObservableObject {
         self.state = state
     }
 
-    func setState(_ state: ViewState<T>) {
-        //        stateSetupTime = Date()
-        //        switch self.state {
-        //        case .loading(_):
-        //            loadingCondition.setState(state, with: self)
-        //        case .content(_):
-        //            contentCondition.setState(state, with: self)
-        //        case .empty(_):
-        //            emptyCondition.setState(state, with: self)
-        //        case .error(_):
-        //            errorCondition.setState(state, with: self)
-        //        }
+    func setState(_ newState: ViewState<T>) {
+        switch self.state {
+        case .loading:
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                self?.forceSetState(newState)
+            }
+        case .content:
+            forceSetState(newState)
+        case .empty:
+            forceSetState(newState)
+        case .error:
+            forceSetState(newState)
+        }
     }
 
     func forceSetState(_ state: ViewState<T>) {
