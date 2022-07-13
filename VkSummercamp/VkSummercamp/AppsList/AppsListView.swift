@@ -21,9 +21,9 @@ struct AppsListView: View {
             case .loading:
                 LoadingView()
             case .empty:
-                Text("Empty")
+                EmptyView()
             case .error:
-                Text("Error")
+                ErrorView()
             }
         }
         .onAppear {
