@@ -12,7 +12,8 @@ struct VkSummercampApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                AppsListView(viewModel: AppsListViewModel(state: .empty))
+                AppsListView(viewModel: AppsListViewModel(state: .empty,
+                                                          networkService: NetworkService(session: .shared)))
                     .tabItem {
                         Label("Apps", systemImage: "list.bullet")
                     }
