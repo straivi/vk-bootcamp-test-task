@@ -21,9 +21,13 @@ struct AppsListView: View {
             case .loading:
                 LoadingView()
             case .empty:
-                EmptyView()
+                EmptyView {
+                    viewModel.requestData()
+                }
             case .error:
-                ErrorView()
+                ErrorView {
+                    viewModel.requestData()
+                }
             }
         }
         .onAppear {

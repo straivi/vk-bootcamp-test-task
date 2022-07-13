@@ -9,6 +9,12 @@ import SwiftUI
 
 struct EmptyView: View {
 
+    private let action: () -> Void
+
+    init(refreshAction:  @escaping () -> Void) {
+        action = refreshAction
+    }
+
     var body: some View {
         VStack {
             Image(AppImageNames.empty)
@@ -20,6 +26,19 @@ struct EmptyView: View {
             Text("Ничего неть(")
                 .foregroundColor(AppColors.vkBlue)
                 .font(Font.headline)
+
+            Button {
+                action()
+            } label: {
+                Text("Обновить")
+                    .foregroundColor(.white)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)
+                    .background(AppColors.vkBlue)
+                    .cornerRadius(10)
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 40)
+
         }
     }
 }
