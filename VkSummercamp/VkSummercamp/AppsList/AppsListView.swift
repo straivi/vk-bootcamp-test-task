@@ -16,7 +16,7 @@ struct AppsListView: View {
             switch viewModel.stateMachine.state {
             case .content(let list):
                 List(list) {
-                    Text($0.name)
+                    AppItemView(viewModel: AppItemViewModel(data: $0))
                 }
                 .refreshable {
                     viewModel.pullToRefreshAction()
